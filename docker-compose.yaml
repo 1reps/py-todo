@@ -1,0 +1,10 @@
+services:
+  demo-app:
+    build: .
+    volumes:
+      - .:/src
+      - .dockervenv:/src/.venv
+    ports:
+      - "8000:8000"
+    environment:
+      - WATCHFILES_FORCE_POLLING=true
