@@ -1,5 +1,6 @@
 ### ToDo 앱을 구현하기 위한 기능 정리
 
+#### TODO
 - ToDo 리스트 표시하기
 - ToDo에 작업 추가하기
 - ToDo 작업 설명문을 변경하기
@@ -16,12 +17,12 @@ _endpoint_
 - `PUT` /tasks/{task_id}/done
 - `DELETE` /tasks/{task_id}/done
 
+_FastAPI 내장 기능들_
+- Swagger UI: http://localhost:8000/docs
+- ReDoc: http://localhost:8000/redoc
+- OpenAPI Schema: http://localhost:8000/openapi.json
+
 _FastAPI 공식 문서_
 
 - https://fastapi.tiangolo.com/
 - https://fastapi.tiangolo.com/ja/tutorial/sql-databases/#file-structure
-
-_swagger_
-
-- http://localhost:8000/docs#/
-- http://127.0.0.1:8000/docs#/
