@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/pyToDo.iml" filepath="$PROJECT_DIR$/pyToDo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pypypy/pypypy.iml" filepath="$PROJECT_DIR$/../pypypy/pypypy.iml" />
     </modules>
   </component>
 </project>
