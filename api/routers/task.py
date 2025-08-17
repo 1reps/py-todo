@@ -12,11 +12,8 @@ router = APIRouter(
 
 
 @router.get("/tasks", response_model=list[task_schema.Task])
-async def list_tasks():
-    return [
-        task_schema.Task(id=1, title="첫 번째 ToDo 작업", done=False),
-        task_schema.Task(id=2, title="두 번째 ToDo 작업", done=True),
-    ]
+async def list_tasks(db: Session = Depends(get_db)):
+    return task_crud.get_tasks_with_done(db);
 
 
 # ** 는 dict 언패킹을 말하며, * 는 리스트 언패킹을 말한다
