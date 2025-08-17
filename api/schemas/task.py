@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field, ConfigDict
+from pydantic import BaseModel, ConfigDict, Field
 
 """
 Task 모델 정의
@@ -7,21 +7,21 @@ Task 모델 정의
 
 
 class TaskBase(BaseModel):
-  title: str = Field(..., example="세탁소에 맡긴 것을 찾으러 가기")
+    title: str = Field(..., example="세탁소에 맡긴 것을 찾으러 가기")
 
 
 class TaskCreate(TaskBase):
-  pass
+    pass
 
 
 class TaskCreateResponse(TaskCreate):
-  id: int
+    id: int
 
-  model_config = ConfigDict(from_attributes=True)
+    model_config = ConfigDict(from_attributes=True)
 
 
 class Task(TaskBase):
-  id: int
-  done: bool = Field(False, description="완료 플래그")
+    id: int
+    done: bool = Field(False, description="완료 플래그")
 
-  model_config = ConfigDict(from_attributes=True)
+    model_config = ConfigDict(from_attributes=True)
